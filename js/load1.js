@@ -108,7 +108,7 @@ function invite_parent(){				if( document.getElementById("alerts").style.display
 										else if(document.getElementById("alerts").style.display == "none"){
 											toggleSlider();
 										}
-											var modal_class=  document.getElementById("alerts");
+										var modal_class=  document.getElementById("alerts");
 										modal_class.addEventListener("click", function(){hide_alert()}, false);
 										$("#alert_title").hide();
 										$("#alert_title_text").show();
@@ -241,8 +241,16 @@ function show_gif(){
 	modal_class.addEventListener("click", function(){hide_alert()}, false);
 $("#invite").hide();
 $("#gif").show();
-$("#pop_img").show();
-$("#pop_img1").show();
+$("#alert_title").show();
+$("#alert_title_text").show();
+$("#next").show();
+$("#alert_title_text").html("How parents will see...???");
+$("#gif").prepend('<img id="pop_img" src="img/ezgif.com-crop.gif" height="60px" width="60px">');
+$("#gif").prepend('<img id="pop_img1" src="img/ezgif.com-resize.gif" height="60px" width="60px">');
+var next = document.getElementById("next");
+next.innerHTML ="BACK";
+next.style.width = "100%";
+next.setAttribute("onclick","invite_parent()");
 }
 
 function close_invite(){
@@ -376,7 +384,7 @@ function toggleSlider() {
             },
             10,
 			function(){
-					$("#alert_title").slideUp(0);
+					$("#inner_alerts").slideUp(0);
 					$("#alerts").fadeOut(100);	
             }
         );
@@ -391,7 +399,7 @@ function toggleSlider() {
             );
 			if( document.getElementById("alert_title").style.display != "none")
 				{
-				$("#alert_title").slideDown(200);
+				$("#inner_alerts").slideDown(200);
 				}
         });	
     }   
@@ -936,6 +944,7 @@ function create_class(){				$("#alert_title").show();
 										$("#btn").hide();
 										$("#invite_link").hide();
 										$("#enter_class_name").show();
+										$("#enter_class_name").attr("placeholder", "Enter Class Name");
 										$("#next").removeAttr('style');
 										back.style.display = "block";
 										document.getElementById("alert_title_text").innerHTML ="Create a classroom.";
@@ -999,7 +1008,8 @@ if((typeof currentUser.get("Created_groups") == 'undefined') || c == my_class_na
 										$("#invite_link").show();
 										msg.innerHTML = "<center>Your class "+class_name+" has been created with code<br><strong><h3> "+class_token+"</h3></strong><br> Share the above code with your students to start sending mesage to them</center>";
 										next.innerHTML ="OK";
-										next.setAttribute("onclick","on_create_load()");											
+										next.setAttribute("onclick","on_create_load()");			
+										document.getElementById("invite_class").innerHTML = new_class_name;								
 				},
 				error:function(codegroup,error){
 							if(error.code==209){
