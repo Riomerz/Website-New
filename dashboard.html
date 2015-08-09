@@ -3,36 +3,55 @@
 	<head>
 		 <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Knit | My Classroom</title>
-		<meta name="author" content="Knit" /> <meta name="revisit-after" content="1 days">
-		<meta name="keywords" content="one way, safe, free, knit, knitapp, school education, free messenger, teacher, school, student, one-way messaging, knit messaging, instant messaging, teacher-parent, teacher-parent communication, Broadcest messages" /> <meta name="description" content="Knit is the easiest, quickest, and most secure way for teachers to instantly message students or their parents. Knit helps them share positive classroom news, photos, and reminders with parents and students in real time. quickly and easily send a one-way mass message to communicate with all the parents or students in your class." /> <link rel="shortcut icon" href="favicon_16.ico" type="image/x-icon"/> <link rel="bookmark" href="favicon_16.ico" />
+		<title>My Classroom</title>
+		
+		<link rel="shortcut icon" href="favicon_16.ico" type="image/x-icon"/>
+    <link rel="bookmark" href="favicon_16.ico" />
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        
+		
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		
 		<link rel="stylesheet" type="text/css" href="css/media-query.css">
 		<!-- Magnific Popup core CSS file -->
 		<link rel="stylesheet" href="css/magnific-popup.css"> 
+	
 		<!-- Latest compiled and minified JavaScript -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<script src="js/sidr/jquery.sidr.min.js"></script>
+	
 		<script src="js/jquery.magnific-popup.js"></script>
+		
+		
+		 
 		 <link rel="stylesheet" type="text/css" href="css/dstyle.css">
 		 <script>
 	$(window).load(function() {
+		
 		$(".se-pre-con").fadeOut("slow");
 	    });
-		 </script>	
+
+		 </script>
+		 		
   <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+ 
 <script>
 Parse.initialize("tTqAhR73SE4NWFhulYX4IjQSDH2TkuTblujAbvOK", "RA3UNkDyxXN6r9b4VmJ8x9QAGbnkV1yedHL5wC8j");
 Parse.User.enableRevocableSession();
 // Parse.Session.isCurrentSessionRevocable();
  </script>
+
 <script type="text/javascript" src="js/load1.js"></script>
+
+
 		<style>		
+		
+		
+		
 .se-pre-con {
 	position: fixed;
 	left: 0px;
@@ -42,13 +61,16 @@ Parse.User.enableRevocableSession();
 	z-index: 9999;
 	background: url(icons/knit_logo_blue.gif) center no-repeat #fff;
 }
+
 .sending{
 width:100px;
 height:50px;
 margin-right:20px;
 float:right;
+
 background: url(icons/knit_loader8.gif) center  no-repeat #fff;
 }
+
 #alerts{
 position: fixed;
 	left: 0px;
@@ -60,6 +82,10 @@ display:none;
 background: rgba(53, 56, 57, 0.7);
 opacity:0.999;
 }
+
+
+
+
 @media screen and (min-width: 600px) and  (max-width: 1200px) {
 #next{
 width:60px;
@@ -68,21 +94,32 @@ width:60px;
 width:60px;
 }
 }
-.icon-remove{}
-.icon-cog{}
+
+.icon-remove{
+
+}
+
+.icon-cog{
+
+}
+
 #msgs_invite_3{
 margin-left:14%;
 float:left;
 width:250px;
 }
+
 #msgs_invite_4{
 margin-left:15%;
 float:left;
 width:250px;
 }
+
 #main{
 height:auto;
 }
+
+
 #list_email{
 float:right;
  border: 1px solid black;
@@ -90,6 +127,7 @@ float:right;
     height: 200px;
 	margin-right:2%;
 }
+
 #list_number{
 float:right;
  border: 1px solid black;
@@ -97,8 +135,10 @@ float:right;
     height: 200px;
 	margin-right:2%;
 }
+
 </style>
 <style>
+
 </style>
 	</head>
 	<body>		
@@ -109,6 +149,7 @@ float:right;
 				<img id="add_alert_info" src="" width="25px" />
 				<div id="alert_title_text"></div>
 			</div>
+			
 							<div id="invite" class="reg-form">
 								<div class="choose-type active" data-show="via-email" style="text-align:center;font-family: Lato-regular">Send Invitation via Email</div>
 								<div class="choose-type inactive" data-show="via-sms" style="text-align:center;font-family: Lato-regular">Send Invitation via SMS</div>
@@ -118,43 +159,57 @@ float:right;
 								<label style="margin-left: 12.5%;">Enter emails separated by comma.</label>
 								<textarea ng-model="invitations.recipients" name="emails-numbers" id="invite-parents-emails" rows="6" placeholder="example@xyz.com, another@xyz.com" ng-if="!group.subscribe.sms" style=""></textarea>
 								<button class="send_btn" onclick="send_email()">Send Invitation</button></a>
+								
 								</div>
 								</div>
+								
 								<div id="via-sms" class="home-reg-content">
 									<div class="input-group">
 									<label style="margin-left: 11.5%;">Enter mobile numbers separated by comma.</label>
 									<textarea ng-model="invitations.recipients" name="emails-numbers" id="invite-parents-numbers" rows="6" placeholder="9898989898,7676767676" ng-if="!group.subscribe.sms" style=""></textarea>
 									<button class="send_btn_2" onclick="send_number()">Send Invitation</button></a>
+									
 									</div>
 								</div>
 								<p style="font-family: Lato-regular;margin-bottom:0px;text-align:center" id="success_alert"></p>
 								<div id="msgs_invite">Recommended</div>
 								<div id="download_button" onclick="mail()">Recieve instructions on Email</div>
 								<div id="parents_see" onclick="show_gif()">How parents will see...???</div>
+								
 							</div>
+							
 							<div id="gif">
 							<img id="pop_img" src="img/ezgif.com-crop.gif" height="60px" width="60px">
 							<img id="pop_img1" src="img/ezgif.com-resize.gif" height="60px" width="60px">
 							</div>
+							
+							
 			<div id="alert_details"></div>
 			<div id="invite_link"></div>
 			<div id="alert_profile_pic"><p style="text-align:center;font-family:Gotham-Light;font-size:30px;margin-bottom:10%">Your Profile</p><img id="profile_pic_img_pp" src="" />
 					</div>
 			<div id="alert_profile">
+                                            
 									<div class="profile_popup">
                                         <span id="Sach" style="width:80%"></span>
+                                    
                                     <a id="EditSach"><i id="cc2" class="glyphicon glyphicon-pencil" style="float:right"></i></a>
-									</div>                 
+									</div>
+                                    
                           <div class="profile_popup">      
                           <i class="glyphicon glyphicon-earphone"></i>  <span id="phn"></span>
                             </div>        
+
                                <div class="profile_popup"> <span id="eml"></span></div>
 							   <div><a href="#" onclick="trych();return false;" style="margin-left:80px">Change Profile Pic</a></div>
+                                
 			</div>
 			<p style="float:left;margin-left:6%;font-family: Lato-regular;margin-bottom:0px"class="number-alerts" id="alert_msg"></p>
 			<input class="input-alert"id="enter_class_name" type="text" placeholder="Class Name"style=" font: 20px lato;border:1px solid #999999;font-family:Lato-regular"  size ="26"name="new_c_name">
+			
 			<center id="alertmess"></center>
 			 <div id="uplme">
+			 
                     <center >
                         <span id="pickr1" class="btn btn-default btn-file">
                                      Upload a new Picture <input type="file" id="att2" onchange="pp()">
@@ -169,12 +224,16 @@ float:right;
                         </div>
                     </div>
                 </div>
-                </div>	
+                </div>
+			
+			
 			<div id="back"></div>
 			<div id="next"></div>
 			<div id="btn"></div>
 		</div>
 	</div>
+	
+	
 	<div style="position:fixed;width:100%;z-index:999;box-shadow: 0 0 15px rgba(0,0,0,0.2);
     -moz-box-shadow: 0 0 8px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
@@ -184,6 +243,9 @@ float:right;
 		  <div style="float:left" id="sidebar">
 			  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
 			</div>
+			
+			    <!--a href="#" class="toggle-nav btn btn-lg btn-success" id="sidebar"><i class="fa fa-bars"></i></a-->
+			
 		    <div class="navbar-header">
 		      <a class="navbar-brand" href="#">
 		        <a href="dashboard.html"><span><img class="brand-logo img-responsive" src="icons/logo.png"></span></a>
@@ -210,37 +272,54 @@ float:right;
 		<div id="page-container" class="container-fluid">
 			<div class="page-left-container">
 				<div class="wrapper">
+				
+			
 				<div class="left-header">
+					
 					<div><img src="icons/classroom.png"><span>Classrooms</span></div>
 				</div>
 				<div id="class_room" class="class-list-header" onclick="load_again()">My Feeds</div>
 				<div id="class-list"  style="overflow:auto;direction:rtl;">
+
 				</div>
 				<a id="create-class-btn" href="#create-class-modal">
 				<div>
 					<div onclick="create_class()"><img src="icons/plus.png"><span>Create Class</span></div>
 				</div>
 				</a>
+				
 				</div>
 			</div>
+	
 			<div class="page-center-container col-xs-12 col-sm-12 col-md-8 col-lg-8" >
 				<div id="form-wrapper" class="col-xs-12 col-sm-12">
+					
 					<div type="text" class="add-class col-xs-12 col-sm-12">
 					<div style="position:absolute;float:left;padding-left: 10px;padding-top: 10px;font-size: px;font-family: Lato-regular;font-weight: bold;">To</div>
 					<div  id="base" ></div>
+					
 						<div id="classname"></div>
+					
+					
 					</div>
+					
 					<textarea onfocus="highlight_send()" onfocusout="highlight_back()" class="add-text col-xs-12 col-sm-12 "  id="send_message" >
+						
 					</textarea>
 					<div id="button-area" class="col-xs-12 col-sm-12">
 					<div class="upload" onmouseout="back_attach()"onmouseover="highlight_attach()"><input type="file"accept="image/*" onChange="load_image(this.id,this.value,this)" class="upload1" name="attachment" id="attachment" style="float:left;" ></input>
 					</div><img id="attachment_name" src="#" alt="your image" />
+						
 						<input type="button" id="send_button" class="knit-btn2" onmouseout ="border_back()" onmouseover ="border_hover()"style="float:right;margin-right:20px;border-radius:3px"value="Send"onclick="send_with_picture();"></input>
 			            <div class="sending"></div>
 					</div>
 				</div>
+			
+				
 					<!--<DIV id="img_container"></div>-->
 					<div id="class-feed-container" class="col-xs-12 col-sm-12" >
+					
+			
 					<div class="class-feed " id="should-be-hidden">
 						<div class="date-separator col-xs-12 col-sm-12">
 							<div class="hr">&nbsp;</div>
@@ -251,32 +330,46 @@ float:right;
 							This is Where your messages will appear
 							(You found where your messages go.)
 						</div>
-						<div class="feed-image" >					
+						<div class="feed-image" >
+					
+							<!--<a class="image-popup-no-margins" onclick="show_this(this)">
+							<img   id="load-feed-image" src="icons/logo.png">
+							</a>-->
 						<a class="showPopup" ><img id="load-feed-image" src="icons/logo.png" style="max-width:100%;height:auto"/></a>
 							 
 						</div>
 						<div class="feed-actions">
 							<div class="feed-footer-left">						
 							<div class="like-btn inline-content">
+								
 								<div class="like-btn-count inline-content feed-footer-data feed-footer-number">12</div>
 								<img src="icons/like_new.png">
 							</div>
 							<div class="question-btn inline-content">
+								
 								<div class="question-btn-count inline-content feed-footer-data feed-footer-number">17</div>
 								<img src="icons/question_new.png">
 							</div>
+														
 														<div class="seen-by inline-content feed-footer-data color-gray feed-footer-number">
 														 <span class="seen-by-count"> 36</span><img src="icons/eye.png"/>
+								
 							</div>
+							
 							</div>
+
 							<div class="feed-time feed-footer-data feed-footer-right color-gray">
 								6:30 PM
 							</div>
 						</div>
 					</div>
+					
+					
 				</div><br>
 				<center><button type="submit" id="showmore" onclick="showold()" > Show More</button></center>
+				
 			</div>
+			
 			<div  class="page-right-container col-xs-12 col-sm-12" >
 				<div class="wrapper" id="susbscriber-list-names" >
 				<div id="profile_pic" > <img id="profile_pic_img" src=""width="120px" height="120px"/></div>
@@ -293,7 +386,8 @@ float:right;
 						<div id="subscriber-header" class="side-div">
 							<span id="subscriber-count-container1" style="display:block;">Subscribers <span id="subscriber-count"></span></span>
 						</div>
-						<!--auto generated subscribers -->		
+						<!--auto generated subscribers -->
+						
 					</div>
 					<!--To Delete Class Using Button down at subscriber -->
 					<div id="delete-class-btn" style="display:none;" onclick="delete_class()">
@@ -301,8 +395,195 @@ float:right;
 					</div>
 				</div>
 			</div>
+
 		</div>
+	
+	
+	
+	
+		<!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script-->
 		<script src="js/sidr/jquery.sidr.min.js"></script>
 		<script src="js/jquery.magnific-popup.js"></script>
-		<script type="text/javascript">		
+		<script type="text/javascript">
+		
+		
     </script>
+
+
+	
+
+	<!------Modal------>
+	 <!--div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#0A3A48;color:white">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel" onclick="edit()"><center>Your Profile</center></h4>
+                </div>
+                <div class="modal-body">
+                    <center id="alertmess"></center>
+                    <center>
+                        <div class="profile-photo-modal"> <img id="profile_pic_img_pp" src="" />
+					</div>
+					<hr>
+                <p><a href="#" onclick="trych();return false;">Change Profile Pic</a>
+                        </p>
+                    </center>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <table class="table table-hover">
+                                <tr>
+                                    <td colspan="2">
+
+										
+                                        <div id="Sach"></div>
+                                    </td>
+                                    <td><a id="EditSach"><i id="cc2" class="glyphicon glyphicon-pencil"></i></a>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><i class="glyphicon glyphicon-earphone"></i>  <span id="phn"></span>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><span id="eml"></span>
+                                    </td>
+
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div-->
+	
+	 <!--div class="modal fade" id="modalpic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel"><center id="pickr">Change Profile Pic</center></h4>
+                </div>
+                <div class="modal-body" id="uplme">
+                    <center >
+                        <span id="pickr1" class="btn btn-default btn-file">
+                                     Upload a new Picture <input type="file" id="att2" onchange="pp()">
+                                </span>
+                    </center>
+                <div id="upperr">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="alert alert-danger" style="padding-top:2px; padding-bottom:2px;">
+                                <center id="uplerr"></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="changp()"id="forupl" class="btn btn-primary">Confirm</button>
+                    <button type="button" onclick="cancelit()" class="btn btn-default" >Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div-->
+	<!------->
+		
+		    <script type="text/javascript">
+
+var z=0;
+        $("#EditSach").click(function () {
+        if(z==0){   
+var u2=$("#Sach").text();
+ $('#Sach').replaceWith($('<input  id="Sach"type = "text">' + '</input>'));
+document.getElementById("Sach").placeholder=u2;
+document.getElementById("cc2").className="glyphicon glyphicon-ok";
+//$("#Sacho").val(u);
+z=1;
+}
+else{
+var y2=$("#Sach").val();
+var cc2= document.createElement('div');
+cnam=document.createTextNode(y2);
+cc2.id="Sach";
+cc2.appendChild(cnam);
+document.getElementById('cc2').className="glyphicon glyphicon-pencil";
+$("#Sach").replaceWith(cc2);
+z=0;
+ var currentUser = Parse.User.current();
+if(y2!=""){
+
+//currentUser.set("name", y2); 
+//currentUser.save(null, {
+Parse.Cloud.run('updateProfileName', {name: y2},{
+  success: function(flag) {
+if(y2!=""){
+$("#Sach").text(y2);
+currentUser.fetch();
+document.getElementById("profile_name").innerHTML = y2+"<br>"+display_name[0];
+document.getElementById("teacher_name").innerHTML = y2;
+document.getElementById("profilename").innerHTML = y2;
+document.getElementById("cc2").className="glyphicon glyphicon-pencil";
+ $("#alertmess").text("Your profile name has been edited");
+$("#sentnotif").show();
+window.setTimeout('$("#sentnotif").hide();', 5000);
+}
+  },
+  error: function(flag, error) {
+  }
+});
+
+
+}
+else{
+$("#Sach").text(currentUser.get("name"));
+document.getElementById("cc2").className="glyphicon glyphicon-pencil";
+}
+}
+});
+
+    
+	
+	</script>
+	
+	
+	
+	<script> 
+$(document).ready(function(){
+    $("#sidebar").click(function(){
+
+	if($('.page-left-container').hasClass('active'))
+{
+    $('.page-left-container').css('left', '-70%');
+	$('.page-left-container').removeClass('active');
+} 
+else
+{
+    $('.page-left-container').css('left', '0%');
+	$('.page-left-container').addClass('active');
+}
+	
+	});
+});
+</script> 
+
+<script>
+$('#invite .choose-type').click(function(){
+        $('#invite .choose-type').removeClass('active');    
+        $('#invite .choose-type').addClass('inactive');   
+        $('#invite .home-reg-content').hide();
+        var show_id = $(this).data('show');        
+        $('#'+show_id).show(); 
+        $(this).removeClass('inactive');
+        $(this).addClass('active');
+    });
+	</script>
+	
+
+	</body>
+</html>
