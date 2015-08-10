@@ -3,55 +3,38 @@
 	<head>
 		 <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>My Classroom</title>
-		
-		<link rel="shortcut icon" href="favicon_16.ico" type="image/x-icon"/>
-    <link rel="bookmark" href="favicon_16.ico" />
+		<title>Knit | My Classroom</title>
+		<meta name="author" content="Knit" /> <meta name="revisit-after" content="1 days">
+		<meta name="keywords" content="one way, safe, free, knit, knitapp, school education, free messenger, teacher, school, student, one-way messaging, knit messaging, instant messaging, teacher-parent, teacher-parent communication, Broadcest messages" /> <meta name="description" content="Knit is the easiest, quickest, and most secure way for teachers to instantly message students or their parents. Knit helps them share positive classroom news, photos, and reminders with parents and students in real time. quickly and easily send a one-way mass message to communicate with all the parents or students in your class." /> <link rel="shortcut icon" href="favicon_16.ico" type="image/x-icon"/> <link rel="bookmark" href="favicon_16.ico" />
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        
-		
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">		
 		<link rel="stylesheet" type="text/css" href="css/media-query.css">
 		<!-- Magnific Popup core CSS file -->
 		<link rel="stylesheet" href="css/magnific-popup.css"> 
-	
 		<!-- Latest compiled and minified JavaScript -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<script src="js/sidr/jquery.sidr.min.js"></script>
-	
-		<script src="js/jquery.magnific-popup.js"></script>
-		
-		
-		 
+		<script src="js/jquery.magnific-popup.js"></script>		 
 		 <link rel="stylesheet" type="text/css" href="css/dstyle.css">
 		 <script>
-	$(window).load(function() {
-		
+	$(window).load(function() {		
 		$(".se-pre-con").fadeOut("slow");
 	    });
 
 		 </script>
 		 		
   <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
- 
 <script>
 Parse.initialize("tTqAhR73SE4NWFhulYX4IjQSDH2TkuTblujAbvOK", "RA3UNkDyxXN6r9b4VmJ8x9QAGbnkV1yedHL5wC8j");
 Parse.User.enableRevocableSession();
 // Parse.Session.isCurrentSessionRevocable();
  </script>
-
 <script type="text/javascript" src="js/load1.js"></script>
-
-
 		<style>		
-		
-		
-		
 .se-pre-con {
 	position: fixed;
 	left: 0px;
@@ -61,16 +44,13 @@ Parse.User.enableRevocableSession();
 	z-index: 9999;
 	background: url(icons/knit_logo_blue.gif) center no-repeat #fff;
 }
-
 .sending{
 width:100px;
 height:50px;
 margin-right:20px;
 float:right;
-
 background: url(icons/knit_loader8.gif) center  no-repeat #fff;
 }
-
 #alerts{
 position: fixed;
 	left: 0px;
@@ -407,93 +387,7 @@ float:right;
 		<script type="text/javascript">
 		
 		
-    </script>
-
-
-	
-
-	<!------Modal------>
-	 <!--div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header" style="background-color:#0A3A48;color:white">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel" onclick="edit()"><center>Your Profile</center></h4>
-                </div>
-                <div class="modal-body">
-                    <center id="alertmess"></center>
-                    <center>
-                        <div class="profile-photo-modal"> <img id="profile_pic_img_pp" src="" />
-					</div>
-					<hr>
-                <p><a href="#" onclick="trych();return false;">Change Profile Pic</a>
-                        </p>
-                    </center>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <table class="table table-hover">
-                                <tr>
-                                    <td colspan="2">
-
-										
-                                        <div id="Sach"></div>
-                                    </td>
-                                    <td><a id="EditSach"><i id="cc2" class="glyphicon glyphicon-pencil"></i></a>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><i class="glyphicon glyphicon-earphone"></i>  <span id="phn"></span>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><span id="eml"></span>
-                                    </td>
-
-                                </tr>
-                                
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div-->
-	
-	 <!--div class="modal fade" id="modalpic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel"><center id="pickr">Change Profile Pic</center></h4>
-                </div>
-                <div class="modal-body" id="uplme">
-                    <center >
-                        <span id="pickr1" class="btn btn-default btn-file">
-                                     Upload a new Picture <input type="file" id="att2" onchange="pp()">
-                                </span>
-                    </center>
-                <div id="upperr">
-                    <div class="row">
-                        <div class="col-md-12 ">
-                            <div class="alert alert-danger" style="padding-top:2px; padding-bottom:2px;">
-                                <center id="uplerr"></center>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" onclick="changp()"id="forupl" class="btn btn-primary">Confirm</button>
-                    <button type="button" onclick="cancelit()" class="btn btn-default" >Cancel</button>
-                </div>
-            </div>
-        </div>
-    </div-->
-	<!------->
-		
+    </script>	
 		    <script type="text/javascript">
 
 var z=0;
@@ -503,7 +397,6 @@ var u2=$("#Sach").text();
  $('#Sach').replaceWith($('<input  id="Sach"type = "text">' + '</input>'));
 document.getElementById("Sach").placeholder=u2;
 document.getElementById("cc2").className="glyphicon glyphicon-ok";
-//$("#Sacho").val(u);
 z=1;
 }
 else{
@@ -517,9 +410,6 @@ $("#Sach").replaceWith(cc2);
 z=0;
  var currentUser = Parse.User.current();
 if(y2!=""){
-
-//currentUser.set("name", y2); 
-//currentUser.save(null, {
 Parse.Cloud.run('updateProfileName', {name: y2},{
   success: function(flag) {
 if(y2!=""){
@@ -545,18 +435,11 @@ $("#Sach").text(currentUser.get("name"));
 document.getElementById("cc2").className="glyphicon glyphicon-pencil";
 }
 }
-});
-
-    
-	
-	</script>
-	
-	
-	
+});	
+	</script>	
 	<script> 
 $(document).ready(function(){
     $("#sidebar").click(function(){
-
 	if($('.page-left-container').hasClass('active'))
 {
     $('.page-left-container').css('left', '-70%');
@@ -567,11 +450,9 @@ else
     $('.page-left-container').css('left', '0%');
 	$('.page-left-container').addClass('active');
 }
-	
 	});
 });
 </script> 
-
 <script>
 $('#invite .choose-type').click(function(){
         $('#invite .choose-type').removeClass('active');    
@@ -583,7 +464,5 @@ $('#invite .choose-type').click(function(){
         $(this).addClass('active');
     });
 	</script>
-	
-
 	</body>
 </html>
