@@ -563,8 +563,7 @@ width:83%;
   color:black;
     font-family: Lato-bold;
 }
-  
-  
+    
   #back:hover{
 background-color:#37474F;
 border:1px solid #37474F;
@@ -642,7 +641,6 @@ margin-left:10.5%;
  	height: 92%;
 	/*overflow:scroll;*/
  }
-	
   }
   
  #classname{

@@ -62,10 +62,6 @@ display:none;
 background: rgba(53, 56, 57, 0.7);
 opacity:0.999;
 }
-
-
-
-
 @media screen and (min-width: 600px) and  (max-width: 1200px) {
 #next{
 width:60px;
@@ -74,32 +70,21 @@ width:60px;
 width:60px;
 }
 }
-
-.icon-remove{
-
-}
-
-.icon-cog{
-
-}
-
+.icon-remove{}
+.icon-cog{}
 #msgs_invite_3{
 margin-left:14%;
 float:left;
 width:250px;
 }
-
 #msgs_invite_4{
 margin-left:15%;
 float:left;
 width:250px;
 }
-
 #main{
 height:auto;
 }
-
-
 #list_email{
 float:right;
  border: 1px solid black;
@@ -107,7 +92,6 @@ float:right;
     height: 200px;
 	margin-right:2%;
 }
-
 #list_number{
 float:right;
  border: 1px solid black;
@@ -115,10 +99,8 @@ float:right;
     height: 200px;
 	margin-right:2%;
 }
-
 </style>
 <style>
-
 </style>
 	</head>
 	<body>		
@@ -129,7 +111,6 @@ float:right;
 				<img id="add_alert_info" src="" width="25px" />
 				<div id="alert_title_text"></div>
 			</div>
-			
 							<div id="invite" class="reg-form">
 								<div class="choose-type active" data-show="via-email" style="text-align:center;font-family: Lato-regular">Send Invitation via Email</div>
 								<div class="choose-type inactive" data-show="via-sms" style="text-align:center;font-family: Lato-regular">Send Invitation via SMS</div>
@@ -139,57 +120,43 @@ float:right;
 								<label style="margin-left: 12.5%;">Enter emails separated by comma.</label>
 								<textarea ng-model="invitations.recipients" name="emails-numbers" id="invite-parents-emails" rows="6" placeholder="example@xyz.com, another@xyz.com" ng-if="!group.subscribe.sms" style=""></textarea>
 								<button class="send_btn" onclick="send_email()">Send Invitation</button></a>
-								
 								</div>
 								</div>
-								
 								<div id="via-sms" class="home-reg-content">
 									<div class="input-group">
 									<label style="margin-left: 11.5%;">Enter mobile numbers separated by comma.</label>
 									<textarea ng-model="invitations.recipients" name="emails-numbers" id="invite-parents-numbers" rows="6" placeholder="9898989898,7676767676" ng-if="!group.subscribe.sms" style=""></textarea>
 									<button class="send_btn_2" onclick="send_number()">Send Invitation</button></a>
-									
 									</div>
 								</div>
 								<p style="font-family: Lato-regular;margin-bottom:0px;text-align:center" id="success_alert"></p>
 								<div id="msgs_invite">Recommended</div>
 								<div id="download_button" onclick="mail()">Recieve instructions on Email</div>
 								<div id="parents_see" onclick="show_gif()">How parents will see...???</div>
-								
 							</div>
-							
 							<div id="gif">
 							<img id="pop_img" src="img/ezgif.com-crop.gif" height="60px" width="60px">
 							<img id="pop_img1" src="img/ezgif.com-resize.gif" height="60px" width="60px">
 							</div>
-							
-							
 			<div id="alert_details"></div>
 			<div id="invite_link"></div>
 			<div id="alert_profile_pic"><p style="text-align:center;font-family:Gotham-Light;font-size:30px;margin-bottom:10%">Your Profile</p><img id="profile_pic_img_pp" src="" />
 					</div>
 			<div id="alert_profile">
-                                            
 									<div class="profile_popup">
                                         <span id="Sach" style="width:80%"></span>
-                                    
                                     <a id="EditSach"><i id="cc2" class="glyphicon glyphicon-pencil" style="float:right"></i></a>
-									</div>
-                                    
+									</div>                 
                           <div class="profile_popup">      
                           <i class="glyphicon glyphicon-earphone"></i>  <span id="phn"></span>
                             </div>        
-
                                <div class="profile_popup"> <span id="eml"></span></div>
 							   <div><a href="#" onclick="trych();return false;" style="margin-left:80px">Change Profile Pic</a></div>
-                                
 			</div>
 			<p style="float:left;margin-left:6%;font-family: Lato-regular;margin-bottom:0px"class="number-alerts" id="alert_msg"></p>
 			<input class="input-alert"id="enter_class_name" type="text" placeholder="Class Name"style=" font: 20px lato;border:1px solid #999999;font-family:Lato-regular"  size ="26"name="new_c_name">
-			
 			<center id="alertmess"></center>
 			 <div id="uplme">
-			 
                     <center >
                         <span id="pickr1" class="btn btn-default btn-file">
                                      Upload a new Picture <input type="file" id="att2" onchange="pp()">
@@ -204,16 +171,12 @@ float:right;
                         </div>
                     </div>
                 </div>
-                </div>
-			
-			
+                </div>	
 			<div id="back"></div>
 			<div id="next"></div>
 			<div id="btn"></div>
 		</div>
 	</div>
-	
-	
 	<div style="position:fixed;width:100%;z-index:999;box-shadow: 0 0 15px rgba(0,0,0,0.2);
     -moz-box-shadow: 0 0 8px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
@@ -223,9 +186,6 @@ float:right;
 		  <div style="float:left" id="sidebar">
 			  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
 			</div>
-			
-			    <!--a href="#" class="toggle-nav btn btn-lg btn-success" id="sidebar"><i class="fa fa-bars"></i></a-->
-			
 		    <div class="navbar-header">
 		      <a class="navbar-brand" href="#">
 		        <a href="dashboard.html"><span><img class="brand-logo img-responsive" src="icons/logo.png"></span></a>
@@ -252,54 +212,37 @@ float:right;
 		<div id="page-container" class="container-fluid">
 			<div class="page-left-container">
 				<div class="wrapper">
-				
-			
 				<div class="left-header">
-					
 					<div><img src="icons/classroom.png"><span>Classrooms</span></div>
 				</div>
 				<div id="class_room" class="class-list-header" onclick="load_again()">My Feeds</div>
 				<div id="class-list"  style="overflow:auto;direction:rtl;">
-
 				</div>
 				<a id="create-class-btn" href="#create-class-modal">
 				<div>
 					<div onclick="create_class()"><img src="icons/plus.png"><span>Create Class</span></div>
 				</div>
 				</a>
-				
 				</div>
 			</div>
-	
 			<div class="page-center-container col-xs-12 col-sm-12 col-md-8 col-lg-8" >
 				<div id="form-wrapper" class="col-xs-12 col-sm-12">
-					
 					<div type="text" class="add-class col-xs-12 col-sm-12">
 					<div style="position:absolute;float:left;padding-left: 10px;padding-top: 10px;font-size: px;font-family: Lato-regular;font-weight: bold;">To</div>
 					<div  id="base" ></div>
-					
 						<div id="classname"></div>
-					
-					
 					</div>
-					
 					<textarea onfocus="highlight_send()" onfocusout="highlight_back()" class="add-text col-xs-12 col-sm-12 "  id="send_message" >
-						
 					</textarea>
 					<div id="button-area" class="col-xs-12 col-sm-12">
 					<div class="upload" onmouseout="back_attach()"onmouseover="highlight_attach()"><input type="file"accept="image/*" onChange="load_image(this.id,this.value,this)" class="upload1" name="attachment" id="attachment" style="float:left;" ></input>
 					</div><img id="attachment_name" src="#" alt="your image" />
-						
 						<input type="button" id="send_button" class="knit-btn2" onmouseout ="border_back()" onmouseover ="border_hover()"style="float:right;margin-right:20px;border-radius:3px"value="Send"onclick="send_with_picture();"></input>
 			            <div class="sending"></div>
 					</div>
 				</div>
-			
-				
 					<!--<DIV id="img_container"></div>-->
 					<div id="class-feed-container" class="col-xs-12 col-sm-12" >
-					
-			
 					<div class="class-feed " id="should-be-hidden">
 						<div class="date-separator col-xs-12 col-sm-12">
 							<div class="hr">&nbsp;</div>
@@ -310,46 +253,32 @@ float:right;
 							This is Where your messages will appear
 							(You found where your messages go.)
 						</div>
-						<div class="feed-image" >
-					
-							<!--<a class="image-popup-no-margins" onclick="show_this(this)">
-							<img   id="load-feed-image" src="icons/logo.png">
-							</a>-->
+						<div class="feed-image" >					
 						<a class="showPopup" ><img id="load-feed-image" src="icons/logo.png" style="max-width:100%;height:auto"/></a>
 							 
 						</div>
 						<div class="feed-actions">
 							<div class="feed-footer-left">						
 							<div class="like-btn inline-content">
-								
 								<div class="like-btn-count inline-content feed-footer-data feed-footer-number">12</div>
 								<img src="icons/like_new.png">
 							</div>
 							<div class="question-btn inline-content">
-								
 								<div class="question-btn-count inline-content feed-footer-data feed-footer-number">17</div>
 								<img src="icons/question_new.png">
 							</div>
-														
 														<div class="seen-by inline-content feed-footer-data color-gray feed-footer-number">
 														 <span class="seen-by-count"> 36</span><img src="icons/eye.png"/>
-								
 							</div>
-							
 							</div>
-
 							<div class="feed-time feed-footer-data feed-footer-right color-gray">
 								6:30 PM
 							</div>
 						</div>
 					</div>
-					
-					
 				</div><br>
 				<center><button type="submit" id="showmore" onclick="showold()" > Show More</button></center>
-				
 			</div>
-			
 			<div  class="page-right-container col-xs-12 col-sm-12" >
 				<div class="wrapper" id="susbscriber-list-names" >
 				<div id="profile_pic" > <img id="profile_pic_img" src=""width="120px" height="120px"/></div>
@@ -366,8 +295,7 @@ float:right;
 						<div id="subscriber-header" class="side-div">
 							<span id="subscriber-count-container1" style="display:block;">Subscribers <span id="subscriber-count"></span></span>
 						</div>
-						<!--auto generated subscribers -->
-						
+						<!--auto generated subscribers -->		
 					</div>
 					<!--To Delete Class Using Button down at subscriber -->
 					<div id="delete-class-btn" style="display:none;" onclick="delete_class()">
@@ -375,13 +303,7 @@ float:right;
 					</div>
 				</div>
 			</div>
-
 		</div>
-	
-	
-	
-	
-		<!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script-->
 		<script src="js/sidr/jquery.sidr.min.js"></script>
 		<script src="js/jquery.magnific-popup.js"></script>
 		<script type="text/javascript">
