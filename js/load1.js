@@ -85,6 +85,13 @@ function showmyclasses(){
 function mail(){
 //get classcode
 var classcode = messageObj.get_code();	
+        if (window.XMLHttpRequest){ xmlhttpp=new XMLHttpRequest(); }else{ xmlhttpp=new ActiveXObject("Microsoft.XMLHTTP"); }
+        xmlhttpp.onreadystatechange=function(){
+            if(xmlhttpp.readyState==4 && xmlhttpp.status==200){
+               console.log(xmlhttpp.responseText);
+            }
+        }
+/*
 Parse.Cloud.httpRequest({
   url: 'http://ec2-52-26-56-243.us-west-2.compute.amazonaws.com/createPdf.php',
   params: {
@@ -99,6 +106,11 @@ Parse.Cloud.httpRequest({
 	window.location="index.html";
 }
 	});
+*/
+user_email="shital.godara@gmail.com";
+xmlhttpp.open("GET","http://ec2-52-26-56-243.us-west-2.compute.amazonaws.com/createPdf.php?email="+user_email+"&code="+classcode+"&name="+teachername,true);
+xmlhttpp.send();
+
 }		
 
 function invite_parent(){				if( document.getElementById("alerts").style.display == "")

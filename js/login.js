@@ -301,9 +301,10 @@ var  x1 = document.getElementById("email_id").value;
 var  x2 =document.getElementById("password").value;	
 	
 	//call with brower browserName and web
-
+//check signup process
 Parse.Cloud.run('appEnter',{email:x1,password:x2,os:"web",model:browserName},{
   success: function(results) {
+  	/*
 			var currentUser = Parse.User.current();
 			if (currentUser) {
 				var role = currentUser.get("role");
@@ -312,6 +313,11 @@ Parse.Cloud.run('appEnter',{email:x1,password:x2,os:"web",model:browserName},{
 					window.location = "dashboard.html";
 				}
 				
+			}
+			*/
+			if(results){
+				session_token = results.sessionToken;
+			 load_logged_in();
 			}
 			
   },
@@ -665,6 +671,7 @@ function load_logged_in(){
 					Parse.User.become(session_token).then(function (user) {		
 					var fname = document.getElementsByClassName("name-input")[0].value;
 					console.log(fname);
+					/*
 					if(fname != ""){	
 						var modal_class=  document.getElementById("alerts");
 										modal_class.addEventListener("click", function(){hide_alert()}, false);
@@ -694,6 +701,7 @@ function load_logged_in(){
 										next.setAttribute("onclick","load_logged_in()");
 										back.setAttribute("onclick","toggleSlider()");
 					}	
+					*/
 var currentUser = Parse.User.current();	
 if (currentUser) {
 	window.location = "dashboard.html";	
@@ -811,7 +819,7 @@ Parse.Cloud.run('appEnter',{number:ph_number, name:fname, role:"teacher",code:co
 }
 function signup(){
 	var fname = document.getElementsByClassName("name-input")[0].value;
-	console.log(fname);
+	//console.log(fname);
 	var number = document.getElementsByClassName("mobile-input")[0].value;
 	ph_number=number;
 	if(fname==""){
