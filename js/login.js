@@ -496,32 +496,40 @@ function generate_code(num){
 	
 	Parse.Cloud.run('genCode',{number:num},{
 	    success:function(results){
-			if(results){				toggleSlider();
+			if(results){					toggleSlider();
+										$('#login').hide();
+										$('#code_text').show();
+										$('#enter_code').show();
+										$('#alert_msg_code').hide();
+										$('#alert_details').show();
+										document.getElementById("enter_code").value = "";
+										document.getElementById("alert_title_text").innerHTML ="VERIFY YOURSELF";
+										
 										var modal_class=  document.getElementById("alerts");
 										modal_class.addEventListener("click", function(){hide_alert()}, false);
 									    var next =  document.getElementById("next");									 
-										var msg =  document.getElementById("alert_details");
-										var input1 =document.getElementById("enter_email");
-										var input2 =document.getElementById("enter_password");
-										var prefix =document.getElementById("fixed");
+										//var msg =  document.getElementById("alert_details");
+										//var input1 =document.getElementById("enter_email");
+										//var input2 =document.getElementById("enter_password");
+										//var prefix =document.getElementById("fixed");
 										var img =document.getElementById("add_alert_info");
 										var back = document.getElementById("back");
-										var sel_number = document.getElementById("select_number");
-										var sel_email = document.getElementById("select_email");
-										img.src="icons/info.png";
-										img.style.display="block";
-										input1.style.display ="block";
-										input1.value = "";
-										input1.placeholder = "Code";
-										prefix.style.display = "none";
-										sel_number.style.display ="none";
+										//var sel_number = document.getElementById("select_number");
+										//var sel_email = document.getElementById("select_email");
+										//img.src="icons/info.png";
+										img.style.display="none";
+										//input1.style.display ="block";
+										//sel_number.style.display ="none";
 										next.style.display = "block";
-									    sel_email.style.display ="none";
-										input2.style.display ="none";
+									    //sel_email.style.display ="none";
+										//input1.value = "";
+										//input1.placeholder = "Code";
+										//input2.style.display ="none";
+										//prefix.style.display = "none";
 										back.style.display = "block";
-										document.getElementById("alert_title_text").innerHTML ="VERIFY YOURSELF";
+										
 										document.getElementById("alert_title").style.background = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAPElEQVQYV2NkIA4YMxKhzpiBgeEsIYVgRSDD8CmEK8KnEEURLoUYirApxKoIXSFORcgK8SqCKSSoCKQQALilCT6rrB3mAAAAAElFTkSuQmCC) repeat";
-									    msg.innerHTML = "Enter the verification code sent to your number.";
+									    //msg.innerHTML = "Enter the verification code sent to your number.";
 										next.innerHTML ="NEXT";
 										back.innerHTML ="DISMISS";
 										next.setAttribute("onclick","logged_in()");
@@ -539,31 +547,23 @@ if(error.code==209){
 		toggleSlider();
 			var modal_class=  document.getElementById("alerts");
 			modal_class.addEventListener("click", function(){hide_alert()}, false);
-									    var next =  document.getElementById("next");									 
-										var msg =  document.getElementById("alert_details");
-										var input1 =document.getElementById("enter_email");
-										var input2 =document.getElementById("enter_password");
-										var prefix =document.getElementById("fixed");
+										$('#login').hide();
+										$('#code_text').hide();
+										$('#enter_code').hide();
+										$('#alert_msg_code').hide();
+									
+									    var next =  document.getElementById("next");
 										var img =document.getElementById("add_alert_info");
 										var back = document.getElementById("back");
-										var sel_number = document.getElementById("select_number");
-										var sel_email = document.getElementById("select_email");
 										img.src="icons/error.png";
 										img.style.display="block";
-										input1.style.display ="none";
-										input2.style.display ="none";
-										sel_number.style.display ="none";
-										prefix.style.display = "none";
 										next.style.display = "block";
-									    sel_email.style.display ="none";
 										back.style.display = "none";
 										document.getElementById("alert_title_text").innerHTML ="ERROR";
-										document.getElementById("alert_title").style.background = "#ffc107";
-									    msg.innerHTML = "Server not available please try later...";
+										document.getElementById("alert_title").style.background = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAP0lEQVQYV2NkIAL8P8j+n5GQOrAi+5+MeBXCFIEMw6kQWRFOheiKsCrEpghDIS5FKArxKYIrJKQIrJAYRSCFACC1JtEjjo+nAAAAAElFTkSuQmCC) repeat";
+									    $('#msg').html("Server not available please try later...");
 										next.innerHTML ="DISMISS";
-										back.innerHTML ="CANCEL";
 										next.setAttribute("onclick","toggleSlider()");
-										back.setAttribute("onclick","toggleSlider()");
 		}
 });
 }
@@ -669,7 +669,7 @@ if(error.code==209){
 
 function load_logged_in(){
 					Parse.User.become(session_token).then(function (user) {		
-					var fname = document.getElementsByClassName("name-input")[0].value;
+					var fname = document.getElementsByClassName("name-input")[1].value;
 					console.log(fname);
 					/*
 					if(fname != ""){	
@@ -742,10 +742,10 @@ if(error.code==209){
 	}
 	
 function logged_in(){
-code = document.getElementById("enter_email").value;
+code = document.getElementById("enter_code").value;
 code=parseInt(code);
 if(Number(code))
-var fname = document.getElementsByClassName("name-input")[0].value;
+var fname = document.getElementsByClassName("name-input")[1].value;
 console.log(fname);
 //call with brower browserName and web
 Parse.Cloud.run('appEnter',{number:ph_number, name:fname, role:"teacher",code:code,os:"web",model:browserName},{
@@ -818,21 +818,22 @@ Parse.Cloud.run('appEnter',{number:ph_number, name:fname, role:"teacher",code:co
 	
 }
 function signup(){
-	var fname = document.getElementsByClassName("name-input")[0].value;
-	//console.log(fname);
-	var number = document.getElementsByClassName("mobile-input")[0].value;
+	var fname = document.getElementsByClassName("name-input")[1].value;
+	console.log(fname);
+	var number = document.getElementsByClassName("mobile-input")[3].value;
 	ph_number=number;
+	console.log(number);
 	if(fname==""){
-		 document.getElementsByClassName("number-alerts")[0].innerHTML="*Enter your name";
+		 document.getElementsByClassName("number-alerts")[3].innerHTML="*Enter your name";
 	}
 	else if(number == ""){
-		document.getElementsByClassName("number-alerts")[0].innerHTML="*Enter your phone number";
+		document.getElementsByClassName("number-alerts")[3].innerHTML="*Enter your phone number";
 	}		
 	else if(number.length<10 && number.lenghth>10){
-	  	  document.getElementsByClassName("number-alerts")[0].innerHTML="*Enter a proper phone number";
+	  	  document.getElementsByClassName("number-alerts")[3].innerHTML="*Enter a proper phone number";
 	}
 	else if(Number(number)==NaN){
-		 document.getElementsByClassName("number-alerts")[0].innerHTML="*Enter a proper phone number";
+		 document.getElementsByClassName("number-alerts")[3].innerHTML="*Enter a proper phone number";
 		 
 		}
 		
