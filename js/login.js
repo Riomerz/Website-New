@@ -472,6 +472,7 @@ if(error.code==209){
 										$('#code_text').hide();
 										$('#enter_code').hide();
 										$('#alert_msg_code').hide();
+										$('#alert_details').show();
 									var modal_class=  document.getElementById("alerts");
 									modal_class.addEventListener("click", function(){hide_alert()}, false);
 									    var next =  document.getElementById("next");									 
@@ -551,6 +552,7 @@ if(error.code==209){
 										$('#code_text').hide();
 										$('#enter_code').hide();
 										$('#alert_msg_code').hide();
+										$('#alert_details').show();
 									
 									    var next =  document.getElementById("next");
 										var img =document.getElementById("add_alert_info");
@@ -627,6 +629,7 @@ if(error.code==209){
 										$('#code_text').hide();
 										$('#enter_code').hide();
 										$('#alert_msg_code').hide();
+										$('#alert_details').show();
 									var modal_class=  document.getElementById("alerts");
 									modal_class.addEventListener("click", function(){hide_alert()}, false);
 									    var next =  document.getElementById("next");
@@ -647,6 +650,7 @@ if(error.code==209){
 										$('#code_text').hide();
 										$('#enter_code').hide();
 										$('#alert_msg_code').hide();
+										$('#alert_details').show();
 									var modal_class=  document.getElementById("alerts");
 									modal_class.addEventListener("click", function(){hide_alert()}, false);
 									    var next =  document.getElementById("next");									 
@@ -668,6 +672,7 @@ if(error.code==209){
 }
 
 function load_logged_in(){
+					console.log(session_token);
 					Parse.User.become(session_token).then(function (user) {		
 					var fname = document.getElementsByClassName("name-input")[1].value;
 					console.log(fname);
@@ -711,9 +716,36 @@ if(error.code==209){
 	window.location="index.html";
 }
 				console.log(error.code);
-					var modal_class=  document.getElementById("alerts");
+					
+					$('#login').hide();
+										$('#code_text').hide();
+										$('#enter_code').hide();
+										$('#alert_msg_code').hide();
+										$('#alert_details').show();
+									var modal_class=  document.getElementById("alerts");
 									modal_class.addEventListener("click", function(){hide_alert()}, false);
 									    var next =  document.getElementById("next");									 
+										var img =document.getElementById("add_alert_info");
+										var back = document.getElementById("back");
+										img.src="icons/error.png";
+										img.style.display="block";
+										next.style.display = "block";
+										back.style.display = "none";
+										document.getElementById("alert_title_text").innerHTML ="INVALID";
+										document.getElementById("alert_title").style.background = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAP0lEQVQYV2NkIAL8P8j+n5GQOrAi+5+MeBXCFIEMw6kQWRFOheiKsCrEpghDIS5FKArxKYIrJKQIrJAYRSCFACC1JtEjjo+nAAAAAElFTkSuQmCC) repeat";
+										
+									    $('#msg').html("Please try later");
+										$('#msg').show();
+										next.innerHTML ="DISMISS";
+										next.setAttribute("onclick","toggleSlider()");
+					
+					
+					
+					
+					/*var modal_class=  document.getElementById("alerts");
+									modal_class.addEventListener("click", function(){hide_alert()}, false);
+									    
+										var next =  document.getElementById("next");									 
 										var msg =  document.getElementById("alert_details");
 										var input1 =document.getElementById("enter_email");
 										var input2 =document.getElementById("enter_password");
@@ -737,7 +769,7 @@ if(error.code==209){
 										next.innerHTML ="DISMISS";
 										back.innerHTML ="CANCEL";
 										next.setAttribute("onclick","toggleSlider()");
-										back.setAttribute("onclick","toggleSlider()");			
+										back.setAttribute("onclick","toggleSlider()");			*/
 				});
 	}
 	
